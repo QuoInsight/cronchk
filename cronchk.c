@@ -11,7 +11,7 @@ int _CRT_glob = 0; // turn off globbing to avoid command line wildcard expansion
 
 int trimc(char c) { return (c==' '||c=='\t'||c=='\r'||c=='\n'); }
 char* ltrim(char* s) { while (s!=NULL && s[0]!='\0' && trimc(*s)) s++;  return s; }
-char* rtrim(char* s) { if (s==NULL || s[0]=='\0') return; for (int i=strlen(s)-1; i>=0; i--) if (trimc(s[i])) s[i]='\0'; else break;  return s; }
+char* rtrim(char* s) { if (s==NULL || s[0]=='\0') return NULL; for (int i=strlen(s)-1; i>=0; i--) if (trimc(s[i])) s[i]='\0'; else break;  return s; }
 char* trim(char* s) { return ltrim(rtrim(s)); }
 
 time_t roundMinutes(time_t t, int m)
