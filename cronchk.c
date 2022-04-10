@@ -2,6 +2,7 @@
   © (ɔ) QuoInsight
 */
 int _CRT_glob = 0; // turn off globbing to avoid command line wildcard expansion [Windows only]
+// [UNIX/Linux] #!/bin/sh -f ; set -o noglob ; { FreeBSD noglob - Disable pathname expansion } 
 
 #include <stdio.h>
 #include <time.h>
