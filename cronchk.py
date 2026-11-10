@@ -1,5 +1,26 @@
 #!/usr/bin/env python3
 
+##pip install croniter
+# import datetime, croniter
+# now=datetime.datetime.now()
+# print(1 if croniter.croniter.match('*/5 * * * *', now) else 0)
+ 
+##import flask_apscheduler
+# import apscheduler.triggers.cron
+# import datetime
+# trigger = apscheduler.triggers.cron.CronTrigger.from_crontab('*/5 * * * *')
+# now = datetime.datetime.now(datetime.timezone.utc)
+# next_run = trigger.get_next_fire_time(None, now)
+# print(next_run)
+# return next_run
+ 
+##import datetime
+# utc8 = datetime.timezone(datetime.timedelta(hours=8))
+# print( datetime.datetime.now(utc8) )
+# datetime1 = datetime.datetime.strptime("2026-07-20 15:52:00 +0800", "%Y-%m-%d %H:%M:%S %z")
+# print( datetime1 )
+# print( datetime1.astimezone(datetime.timezone.utc) )
+
 import sys, datetime
 
 def roundTime5min(val) :
@@ -62,7 +83,6 @@ if argc > 1 :
 
 sys.exit("""
  usage: cronchk.py mi hr dd mm wd
-
    mi    minute [*, 0 - 59]
    hr    hour [*, 0 - 23]
    dd    day of month [*, 1 - 31]
@@ -70,7 +90,6 @@ sys.exit("""
    wd    day of week [*, 0 - 6] [Sunday=0]
 
  examples:
-
    cronchk.py 0 0 * * *
      runs daily at 12:00am
    cronchk.py 0,15,30,45 * * * 1-5
