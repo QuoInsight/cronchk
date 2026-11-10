@@ -1,4 +1,6 @@
 #!/bin/sh
+#date "+%M %H %d %m %u"
+#hcron-match "0 9 * * 1-5"
 
 while true; do
   date +"%H %M %S" | {
